@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()],
     build: {
       lib: {
-        entry: resolve(__dirname, 'electron/main.ts'),
+        entry: resolve('electron/main.ts'),
         formats: ['cjs']
       },
       rollupOptions: {
@@ -19,7 +19,7 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()],
     build: {
       lib: {
-        entry: resolve(__dirname, 'electron/preload.ts'),
+        entry: resolve('electron/preload.ts'),
         formats: ['cjs']
       }
     }
@@ -34,9 +34,9 @@ export default defineConfig({
     build: {
       rollupOptions: {
         input: {
-          index: resolve(__dirname, 'index.html'),
-          splash: resolve(__dirname, 'splash.html'),
-          widget: resolve(__dirname, 'widget.html'),
+          index: resolve('index.html'),
+          splash: resolve('splash.html'),
+          widget: resolve('widget.html'),
         },
       },
     },
