@@ -1,11 +1,12 @@
 [build]
-  command = "pnpm --filter @workspace/flowdesk run build"
+  command = "corepack enable && corepack prepare pnpm@10.11.0 --activate && pnpm install && pnpm --filter @workspace/flowdesk run build"
   publish = "artifacts/flowdesk/dist/public"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_ENV = "production"
   PNPM_VERSION = "10"
+  NETLIFY = "true"
 
 [[redirects]]
   from = "/*"
